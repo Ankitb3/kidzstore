@@ -1,12 +1,12 @@
 import Navbar from "./Components/Navbar/Navbar";
-import Slider from "./Components/Slider/Slider";
+import Home from "./Pages/Home";
 
 const App = () => {
 
   return (
     <>
       <Navbar />
-      <Slider />
+       <Home/>
     </>
   );
 };
