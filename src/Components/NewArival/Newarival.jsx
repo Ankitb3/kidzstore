@@ -27,7 +27,7 @@ const Newarival = () => {
   }, []);
 
   return (
-    <Box height={"90vh"}>
+    <Box>
       <Heading
         color={"#3A407B"}
         textAlign={"center"}
