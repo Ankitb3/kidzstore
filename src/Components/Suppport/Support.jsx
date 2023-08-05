@@ -26,7 +26,7 @@ const Support = () => {
       justifyContent={"space-around"}
       mt={24}
       p={2}
-      height={"33vh"}
+      height={{ sm: "80vh", md: "33vh" }}
       flexWrap={"wrap"}
       gap={10}
     >
