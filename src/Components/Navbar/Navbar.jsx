@@ -1,6 +1,5 @@
 import {
-  Avatar,
-  AvatarBadge,
+  Text,
   Box,
   Button,
   Flex,
@@ -58,7 +57,7 @@ const Navbar = () => {
 
       <Box
         display={{ base: "none", md: "flex" }}
-        gap={12}
+        gap={5}
         width={{ md: "auto" }}
       >
         <Button
@@ -73,9 +72,14 @@ const Navbar = () => {
         <Link href="/contact" fontSize={32}>
           {<LiaShoppingBasketSolid />}
         </Link>
-        <Avatar>
-          <AvatarBadge boxSize="1.25em" bg="green.500" />
-        </Avatar>
+        <Button
+          onClick={onOpen}
+          fontSize={25}
+          bg={"transparent"}
+          _hover={{ bg: "transparent" }}
+        >
+          <Text>Login</Text>
+        </Button>
       </Box>
     </Flex>
   );

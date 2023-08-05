@@ -2,6 +2,7 @@ import { Box, Center, Flex, Heading, Text } from "@chakra-ui/react";
 import { FaShippingFast } from "react-icons/fa";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { RiSecurePaymentLine } from "react-icons/ri";
+
 const Support = () => {
   const data = [
     {
@@ -34,6 +35,7 @@ const Support = () => {
           <>
             <Box
               p="4"
+              data-aos="fade-down"
               width={380}
               _hover={{
                 border: "3px dotted #737FF7",

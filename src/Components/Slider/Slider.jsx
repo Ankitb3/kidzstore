@@ -27,7 +27,7 @@ const Slider = () => {
   return (
     <>
       <Flex height={"83.5vh"}>
-        <Box as="h1" bg={"#EDEBFF"} width={"50%"}>
+        <Box as="h1" bg={"#EDEBFF"} width={"50%"}></Box>
           <Heading
             position={"relative"}
             top={"30%"}
@@ -77,7 +77,12 @@ const Slider = () => {
               Praesentium corporis quas cupiditate, eius quam tenetur quasi quae
               provident ex expedita accusamus perspiciatis!
             </Text>
-            <Shopbutton>Shop Now</Shopbutton>
+            <Shopbutton
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+            >
+              Shop Now
+            </Shopbutton>
           </Box>
         </Box>
       </Flex>
