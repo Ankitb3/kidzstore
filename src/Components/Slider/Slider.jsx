@@ -27,7 +27,7 @@ const Slider = () => {
   return (
     <>
       <Flex height={"83.5vh"}>
-        <Box as="h1" bg={"#EDEBFF"} width={"50%"}></Box>
+        <Box as="h1" bg={"#EDEBFF"} width={"50%"}>
           <Heading
             position={"relative"}
             top={"30%"}
