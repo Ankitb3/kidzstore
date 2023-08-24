@@ -8,23 +8,25 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Star from "../../assets/star.png";
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import AddCartButton from "../AddCardButton/AddCartButton";
+import { Cart } from "../Context/Context";
 const Newarival = () => {
-  const [arrivals, setArrivals] = useState([]);
-  console.log(arrivals);
-  useEffect(() => {
-    axios
-      .get(import.meta.env.VITE_APP_PUBLIC_API_KEY)
-      .then((result) => {
-        setArrivals(result.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  const { Products, cartitem, setCartitem } = useContext(Cart);
+  localStorage.setItem("cart", JSON.stringify(cartitem));
+  const [count, setCount] = useState(0);
+  console.log(count);
+
+  function Addcart(arrivalitem) {
+    toast.success("Added To Cart", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+    setCartitem([...cartitem, arrivalitem]);
+    setCount(count + 1);
+  }
 
   return (
     <Box>
@@ -42,13 +44,15 @@ const Newarival = () => {
         <br /> elit, sed do eiusmod tempor incididunt ut labore et dolore magna
         aliqua
       </Text>
+      <ToastContainer />
+
       {/* <Flex> */}
       <Grid
         templateColumns={{ md: "repeat(4, 1fr)", sm: "repeat(2, 1fr)" }}
         justify-content="center"
         gap={6}
       >
-        {arrivals.map((arrivalitem) => {
+        {Products.map((arrivalitem) => {
           return (
             <>
               <GridItem
@@ -87,10 +91,10 @@ const Newarival = () => {
                 </Flex>
 
                 <Center>
-                  {" "}
                   <Box width={"90%"}>
-                    {" "}
-                    <AddCartButton>ADD TO CART</AddCartButton>
+                    <AddCartButton Addcart={() => Addcart(arrivalitem)}>
+                      ADD TO CART
+                    </AddCartButton>
                   </Box>
                 </Center>
               </GridItem>

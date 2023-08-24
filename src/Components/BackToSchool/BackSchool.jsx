@@ -21,13 +21,13 @@ const BackSchool = () => {
         <Box w={["100%", "30%", "30%"]} borderRadius={20} h="100%" bg="#7F8AF6">
           <Image
             src="https://kidxtore.bzotech.com/wp-content/uploads/2023/07/home3-slide1-img.png"
-            height={500}
+            height={526}
           />
         </Box>
         <Box w={["100%", "30%", "30%"]} borderRadius={20} h="100%" bg="#7F8AF6">
           <Image
             src="https://kidxtore.bzotech.com/wp-content/uploads/2023/07/home3-slide2-img.png"
-            height={500}
+            height={526}
           />
         </Box>
       </Flex>

@@ -3,8 +3,9 @@ import Home from "./Pages/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import CartSection from "./Pages/CartPage";
+import { Route,Routes } from "react-router-dom";
 const App = () => {
-
   useEffect(() => {
     AOS.init();
   }, []);
@@ -12,7 +13,11 @@ const App = () => {
   return (
     <>
       <Navbar />
-       <Home/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/cart" element={<CartSection/>}/>
+
+      </Routes>
     </>
   );
 };
