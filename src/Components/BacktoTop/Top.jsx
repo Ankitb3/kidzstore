@@ -5,7 +5,7 @@ const Top = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
   return (
-    <Box bg={"green"}>
+    <Box>
       <Box
         as="span"
         p={7}

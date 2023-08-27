@@ -47,6 +47,7 @@ const Navbar = () => {
       pos={scrollY > 500 ? "fixed" : "none"}
       width={"full"}
       zIndex={"1"}
+      id="top"
     >
       <Box>
         <Link to={"/"}>
